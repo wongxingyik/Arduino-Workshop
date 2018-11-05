@@ -1,3 +1,7 @@
+/* From the last example, we want to maximise the value range of ur ldrvalue.
+ *  Thus, we set a threshold for you highes "ldrvalue" and use it in map() function.
+ */
+
 int ldr = A0;
 
 int led = 3;
@@ -22,7 +26,7 @@ void loop()
 
   if (ldrvalue > brightnessMax)
   {
-    brightnessMax = ldrvalue ; 
+    brightnessMax = ldrvalue ; //The "brightnessMax" will be updated when your "ldrvalue" is higher than it. 
   }
   brightness = map(ldrvalue, 0, brightnessMax, 0 ,255);
 
@@ -32,7 +36,5 @@ void loop()
   Serial.print("\t");
   Serial.print(brightnessMax);
   Serial.print("\t");
-  Serial.println(brightness);
-  
-  
+  Serial.println(brightness); 
 }
