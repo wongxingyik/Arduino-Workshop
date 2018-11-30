@@ -8,6 +8,7 @@ char abc;
 
 void setup() {
   Serial.begin(9600);
+  pinMode(2, OUTPUT);
 }
 
 void loop() {
